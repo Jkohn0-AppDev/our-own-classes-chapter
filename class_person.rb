@@ -18,9 +18,17 @@ class Person
 
   def age
     this_year = Date.today.year
-    birth_year = Date.parse#{birthdate.year}
+    birth_year = Date.parse(self.birthdate).year
     difference_in_years = this_year - birth_year
     return difference_in_years.to_i
   end
 
 end
+
+a = Person.new
+a.first_name = "joe"
+a.last_name = "mamba"
+a.birthdate = "April 19, 1987"
+
+p a.full_name
+p a.age
